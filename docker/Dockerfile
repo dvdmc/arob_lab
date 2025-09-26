@@ -48,5 +48,9 @@ RUN apt-get install -y \
 # Add the source for the system ROS
 RUN echo "source /opt/ros/humble/setup.bash" >> /root/.bashrc
 
+RUN apt-get install -y \
+    ros-humble-aerostack2 \
+    ros-humble-tf-transformations
+
 RUN rm -rf log
 WORKDIR /root/
